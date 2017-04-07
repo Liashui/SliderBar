@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "WMSliderBar.h"
+
 
 @interface ViewController ()
 
@@ -17,6 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    WMSliderBar *slider = [[WMSliderBar alloc] initWithFrame:CGRectMake(0, 50, 320, 30)];
+    slider.dataSource = @[@"123",@"qewr",@"456",@"456",@"456",@"456",@"456",@"456"];
+    [self.view addSubview:slider];
+    slider.backgroundColor=[UIColor redColor];
 }
 
 
